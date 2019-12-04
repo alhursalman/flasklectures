@@ -18,6 +18,6 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-
+app.config['SECRET_KEY'] = "gotalotofcodeinehabits"
 
 from application import routes

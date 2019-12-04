@@ -1,14 +1,13 @@
 {% extends "layout.html" %}
-
 {% block body_content %}
-<p>this is a home page</p>
-{% for post in posts %}
-	<div>
-		<h3>{{ post.title }}</h3>
-		<p><b> - First name:</b>{{ post.first_name }}</p>
-		<p><b> - Last name:</b>{{ post.last_name }}</p>
-		<p> -- {{ post.content }}</p>
-	</div>
-{% endfor %}
+<p>Pokedex</p>
+	{% for post in posts %}
+		<div>
+			<h3>{{ post.title }}</h3>
+			<span> First Name: <i>{{ post.author.first_name }} {{ post.author.last_name }}</i></span>
+			<span> Date: <i>{{ post.date_posted }}</i></span>
+			<p> -- {{ post.content }}</p>
+		</div>
+	{% endfor %}
 	
-{% endblock %}
+{% endblock body_content %}
